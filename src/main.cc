@@ -31,8 +31,8 @@ class TutorialApp : public Application::Listener {
 
   // Inherited from Application::Listener
   virtual void OnLoaded() {
-    view_ = View::Create(800, 600);
-    view_->web_view()->LoadURL(WebURL(WSLit("http://www.google.com")));
+    view_ = View::Create(512, 512);
+    // < Set up your View here. >
   }
 
   // Inherited from Application::Listener
@@ -44,8 +44,12 @@ class TutorialApp : public Application::Listener {
   }
 };
 
+#ifdef _WIN32
 int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE, wchar_t*, 
   int nCmdShow) {
+#else
+int main() {
+#endif
 
   TutorialApp app;
   app.Run();
