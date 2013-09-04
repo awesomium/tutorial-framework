@@ -31,7 +31,7 @@ class TutorialApp : public Application::Listener {
 
   // Inherited from Application::Listener
   virtual void OnLoaded() {
-    view_ = View::Create(512, 512);
+    view_ = View::Create(500, 300);
     // < Set up your View here. >
   }
 
